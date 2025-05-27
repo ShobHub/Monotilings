@@ -10,6 +10,14 @@ import random
 import time
 
 def FKT(G,Pos,d_pos,PL,BDL): #n):
+	'''
+ 	G: Lattice Graph
+  	Pos: Nodes positions dictionary
+   	d_pos: Dual lattice nodes position dictionary
+    	PL: List of Plaquettes
+     
+ 	Implement High-level description of the FKT algorithm steps mentioned here: https://en.wikipedia.org/wiki/FKT_algorithm
+  	'''
 	St = time.time()
 	# G = pickle.load(open('Delta/output-%i.pickle'%n,'rb'))
 	# Pos = pickle.load(open('Delta/Pos_output-%i.pickle'%n,'rb'))
