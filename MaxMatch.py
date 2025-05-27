@@ -60,7 +60,7 @@ def Pos_transform(t,u,v):
 		return(int(u_),int(v_))       #(round(u_,1), round(v_,1))
 	else:
 		return u,v
-
+'''
 def Spectre(name):
 	Pos = {}
 	n=0
@@ -145,8 +145,11 @@ def Spectre(name):
 	G.add_edges_from(edges)
 	
 	return G, Pos, d_pos, PL
+'''
 
 def MaxMatch(G,n,Nodes,x):
+	''' Generates different maximum matchings of any lattice by relabeling nodes'''
+	
 	#NO = Nodes.copy()
 	def mapping():
 		#random.shuffle(NO)
@@ -230,6 +233,15 @@ def parse_svg(svg_file):
     return polygons
 
 def Spectre1(f):
+	'''Create Spectre Lattice from the SVG data files obtained from https://cs.uwaterloo.ca/~csk/spectre/ 
+ 
+ 	Returns 
+  	G: networkx graph
+  	Pos: Dictionary for nodes labels and positions
+   	d_pos: Dictionary for dual lattice nodes labels and positions
+    	PL: List of plaquettes 
+	'''
+	
 	Pos = {}
 	n=0
 	c=0
